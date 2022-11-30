@@ -4,3 +4,11 @@ SELECT CONCAT (
         '...'
     ) AS 'Short Title'
 FROM books;
+-- Subquery stuff
+-- -----------------------------------------------------
+SELECT *
+FROM books
+WHERE pages = (
+        SELECT Min(pages)
+        FROM books
+    )
