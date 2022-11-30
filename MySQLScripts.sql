@@ -9,3 +9,7 @@ CREATE TABLE cats (
 SELECT name,
     age
 FROM cats;
+-- This is a select statement for the books TABLE
+-- ----------------------------------------------
+SELECT *
+FROM books;
