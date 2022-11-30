@@ -2,3 +2,7 @@
 INSERT INTO cats(name, age)
 VALUES ('Connie', 10),
     ('Charlie', 17);
+--Added a select all SQL query
+-- ------------------------------------------------------
+SELECT *
+FROM cats;
