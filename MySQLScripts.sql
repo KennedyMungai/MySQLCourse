@@ -4,6 +4,8 @@ CREATE TABLE cats (
     name VARCHAR(100),
     age INT
 );
+-- A statement to select all the data inside the table
+-- ------------------------------------------------------------------------
 SELECT name,
     age
 FROM cats;
