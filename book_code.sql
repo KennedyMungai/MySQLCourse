@@ -9,6 +9,6 @@ FROM books;
 SELECT *
 FROM books
 WHERE pages = (
-        SELECT Min(pages)
+        SELECT MAX(pages)
         FROM books
     )
