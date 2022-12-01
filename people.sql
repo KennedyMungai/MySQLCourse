@@ -26,3 +26,13 @@ CREATE TABLE comments (
     content VARCHAR(100),
     created_at TIMESTAMP DEFAULT NOW()
 );
+-- Inserting a few rows of data
+-- ---------------------------------------------
+INSERT INTO comments(content)
+VALUES ('Some article name content thing');
+-- A simple table for when an item is updated
+-- ----------------------------------------------
+CREATE TABLE comments2 (
+    content VARCHAR(100),
+    changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
+);
