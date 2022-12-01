@@ -45,3 +45,10 @@ VALUES ('This aint a scene, it is a goddamn arms race'),
     ('Eclipse'),
     ('Echoes'),
     ('Tomorrow');
+-- A simple exercise section for tweets
+-- ------------------------------------
+CREATE TABLE tweets (
+    content VARCHAR(100),
+    username VARCHAR(50),
+    created_at TIMESTAMP DEFAULT NOW() ON UPDATE NOW()
+);
