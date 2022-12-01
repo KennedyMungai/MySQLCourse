@@ -20,3 +20,9 @@ VALUES (
         '04:10:42',
         '1943-12-25 04:10:42'
     );
+--- A simple table for learning about timestamps
+-- ---------------------------------------------
+CREATE TABLE comments (
+    content VARCHAR(100),
+    created_at TIMESTAMP DEFAULT NOW()
+);
