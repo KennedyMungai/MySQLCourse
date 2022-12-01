@@ -4,6 +4,7 @@ SELECT title,
     CASE
         WHEN stock_quantity BETWEEN 0 AND 50 THEN '*'
         WHEN stock_quantity BETWEEN 50 AND 100 THEN '**'
-        ELSE '***'
+        WHEN stock_quantity BETWEEN 100 AND 150 THEN '***'
+        ELSE '****'
     END AS 'Stock'
 FROM books
