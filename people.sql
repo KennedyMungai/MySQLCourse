@@ -36,3 +36,12 @@ CREATE TABLE comments2 (
     content VARCHAR(100),
     changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
 );
+-- Inserting items into the second comments TABLE
+-- ----------------------------------------------
+INSERT INTO comments2(content)
+VALUES ('This aint a scene, it is a goddamn arms race'),
+    ('My somgs know what you did in the dark'),
+    ('Radioactiove'),
+    ('Eclipse'),
+    ('Echoes'),
+    ('Tomorrow');
