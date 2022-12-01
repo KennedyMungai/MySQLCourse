@@ -52,3 +52,8 @@ CREATE TABLE tweets (
     username VARCHAR(50),
     created_at TIMESTAMP DEFAULT NOW() ON UPDATE NOW()
 );
+INSERT INTO tweets(content, username)
+VALUES ('Levitate', 'Dua Lipa'),
+    ('Without Me', 'Halsey'),
+    ('Just Dance', 'Lady Gaga'),
+    ('Im Every Woman', 'Whitney Houston');
