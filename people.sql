@@ -34,7 +34,7 @@ VALUES ('Some article name content thing');
 -- ----------------------------------------------
 CREATE TABLE comments2 (
     content VARCHAR(100),
-    changed_at TIMESTAMP DEFAULT NOW() ON UPDATE CURRENT_TIMESTAMP
+    changed_at TIMESTAMP DEFAULT NOW() ON UPDATE NOW()
 );
 -- Inserting items into the second comments TABLE
 -- ----------------------------------------------
