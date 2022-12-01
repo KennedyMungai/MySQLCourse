@@ -5,4 +5,4 @@ VALUES ('Connie', 10),
 --Added a select all SQL query
 -- ------------------------------------------------------
 SELECT *
-FROM cats;
+FROM books;
