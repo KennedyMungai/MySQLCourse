@@ -14,19 +14,20 @@
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     order_date DATE NOT NULL,
 --     amount DECIMAL(10, 2) NOT NULL,
---     customer_id INT NOT NULL
+--     customer_id INT NOT NULL,
+--     FOREIGN KEY (customer_id) REFERENCES customers(id)
 -- );
 -- -----------------------------------------------
 -- -----------------------------------------------
 -- These sql statements added the starter data to the newly created tables
 -- -----------------------------------------------
 -- -----------------------------------------------
-INSERT INTO customers(first_name, last_name, email)
-VALUES ('Boy', 'George', 'george@gmail.com'),
-    ('George', 'Michael', 'gm@gmail.com'),
-    ('David', 'Bowie', 'david@gmail.com'),
-    ('Blue', 'Steele', 'blue@gmail.com'),
-    ('Bette', 'Davis', 'bette@gmail.com');
+-- INSERT INTO customers(first_name, last_name, email)
+-- VALUES ('Boy', 'George', 'george@gmail.com'),
+--     ('George', 'Michael', 'gm@gmail.com'),
+--     ('David', 'Bowie', 'david@gmail.com'),
+--     ('Blue', 'Steele', 'blue@gmail.com'),
+--     ('Bette', 'Davis', 'bette@gmail.com');
 INSERT INTO orders (order_date, amount, customer_id)
 VALUES ('2016-02-10', 99.99, 1),
     ('2017-11-11', 35.50, 1),
