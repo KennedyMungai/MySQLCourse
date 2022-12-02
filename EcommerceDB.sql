@@ -1,0 +1,13 @@
+-- Active: 1669960513165@@127.0.0.1@3306@online_shop_db
+CREATE TABLE IF NOT EXISTS customers (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(60) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS orders (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    order_date DATE NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    customer_id INT NOT NULL
+);
