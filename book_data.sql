@@ -1,4 +1,4 @@
--- Active: 1669874133351@@127.0.0.1@3306@books_db
+-- Active: 1669874133351@@127.0.0.1@3306
 SELECT title,
     author_lname,
     CASE
