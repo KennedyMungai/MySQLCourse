@@ -1,4 +1,9 @@
 -- Active: 1669960513165@@127.0.0.1@3306@online_shop_db
+-- -----------------------------------------------
+-- -----------------------------------------------
+-- These SQL statements are meant to create tables
+-- -----------------------------------------------
+-- -----------------------------------------------
 -- CREATE TABLE IF NOT EXISTS customers (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     first_name VARCHAR(30) NOT NULL,
@@ -11,6 +16,11 @@
 --     amount DECIMAL(10, 2) NOT NULL,
 --     customer_id INT NOT NULL
 -- );
+-- -----------------------------------------------
+-- -----------------------------------------------
+-- These sql statements added the starter data to the newly created tables
+-- -----------------------------------------------
+-- -----------------------------------------------
 INSERT INTO customers(first_name, last_name, email)
 VALUES ('Boy', 'George', 'george@gmail.com'),
     ('George', 'Michael', 'gm@gmail.com'),
