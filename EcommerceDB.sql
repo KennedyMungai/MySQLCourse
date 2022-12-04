@@ -76,7 +76,8 @@
 -- ------------------------------------------------
 SELECT first_name,
     last_name,
-    order_date,
-    amount
+    -- order_date,
+    SUM(amount)
 FROM customers
     LEFT JOIN orders ON customers.id = orders.customer_id;
+GROUP BY customers.id;
