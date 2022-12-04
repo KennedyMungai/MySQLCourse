@@ -124,3 +124,14 @@ SELECT title AS unreviewed_series
 FROM series
     LEFT JOIN reviews ON series.id = reviews.series_id
 WHERE rating IS NULL;
+-- --------------------------------------------
+-- --------------------------------------------
+-- Challenge 5
+-- --------------------------------------------
+-- --------------------------------------------
+SELECT genre,
+    AVG(rating) AS avg_rating
+FROM series
+    JOIN reviews
+GROUP BY genre
+ORDER BY genre;
