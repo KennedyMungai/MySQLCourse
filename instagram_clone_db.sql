@@ -40,6 +40,14 @@ CREATE TABLE IF NOT EXISTS likes (
     FOREIGN KEY(photo_id) REFERENCES photos(id),
     PRIMARY KEY (user_id, photo_id)
 );
+CREATE TABLE IF NOT EXISTS follows (
+    follower_id INT NOT NULL,
+    followee_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY (follower_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (followee_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    PRIMARY KEY (follower_id, followee_id)
+);
 -- -------------------------------------------------------------
 -- -------------------------------------------------------------
 -- Alter statements
