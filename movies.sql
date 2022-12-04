@@ -41,3 +41,11 @@ VALUES ('Archer', 2009, 'Animation'),
     ("Pushing Daisies", 2007, 'Comedy'),
     ("Seinfeld", 1989, 'Comedy'),
     ("Stranger Things", 2016, 'Drama');
+INSERT INTO reviewers (first_name, last_name)
+VALUES ('Thomas', 'Stoneman'),
+    ('Wyatt', 'Skaggs'),
+    ('Kimbra', 'Masters'),
+    ('Domingo', 'Cortes'),
+    ('Colt', 'Steel'),
+    ('Pinkie', 'Petit'),
+    ('Marlon', 'Crafford');
