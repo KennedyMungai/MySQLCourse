@@ -142,10 +142,10 @@ ORDER BY genre;
 -- --------------------------------------------
 SELECT first_name,
     last_name,
-    COUNT(reviews.reviewer_id) AS COUNT,
-    MIN(reviews.rating) AS MIN,
-    MAX(reviews.rating) AS MAX,
-    AVG(reviews.rating) AS AVG,
+    IFNULL(COUNT(rating), 0) AS COUNT,
+    IFNULL(MIN(rating), 0) AS MIN,
+    IFNULL(MAX(rating), 0) AS MAX,
+    IFNULL(AVG(rating), 0) AS AVG,
     -- CASE
     --     WHERE reviews.reviewer_id IS NULL THEN 'INACTIVE'
     --         ELSE 'ACTIVE'
