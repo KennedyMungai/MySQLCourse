@@ -61,11 +61,19 @@
 -- A query to find the biggest spender 
 -- ------------------------------------------------
 -- ------------------------------------------------
-SELECT first_name,
-    last_name,
-    customer_id,
-    SUM(amount) AS 'Total Spent'
+-- SELECT first_name,
+--     last_name,
+--     customer_id,
+--     SUM(amount) AS 'Total Spent'
+-- FROM customers
+--     JOIN orders ON customers.id = orders.customer_id
+-- GROUP BY orders.customer_id
+-- ORDER BY SUM(amount) DESC;
+-- ------------------------------------------------
+-- ------------------------------------------------
+-- A left join
+-- ------------------------------------------------
+-- ------------------------------------------------
+SELECT *
 FROM customers
-    JOIN orders ON customers.id = orders.customer_id
-GROUP BY orders.customer_id
-ORDER BY SUM(amount) DESC;
+    LEFT JOIN orders ON customers.id = orders.customer_id;
