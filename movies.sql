@@ -21,6 +21,14 @@ CREATE TABLE IF NOT EXISTS series (
     released_year YEAR NOT NULL,
     genre VARCHAR(50)
 );
+CREATE TABLE IF NOT EXISTS reviews (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    rating DECIMAL(2, 1) NOT NULL,
+    series_id INT NOT NULL,
+    reviewer_id INT NOT NULL,
+    FOREIGN KEY(series_id) REFERENCES series(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    Foreign Key (reviewer_id) REFERENCES reviewers(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
 -- --------------------------------------------
 -- --------------------------------------------
 -- Data Inserts
