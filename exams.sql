@@ -80,3 +80,13 @@ SELECT first_name,
     grade
 FROM students
     LEFT JOIN papers on students.id = papers.student_id;
+-----------------------------------------------------
+-----------------------------------------------------
+-- Third Exercise Solution
+-----------------------------------------------------
+-----------------------------------------------------
+SELECT first_name,
+    IFNULL((title), 'missing'),
+    IFNULL((grade), 0)
+FROM students
+    LEFT JOIN papers on students.id = papers.student_id;
