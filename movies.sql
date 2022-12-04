@@ -146,10 +146,7 @@ SELECT first_name,
     IFNULL(MIN(rating), 0) AS MIN,
     IFNULL(MAX(rating), 0) AS MAX,
     IFNULL(AVG(rating), 0) AS AVG,
-    -- CASE
-    --     WHERE reviews.reviewer_id IS NULL THEN 'INACTIVE'
-    --         ELSE 'ACTIVE'
-    -- END AS STATUS
+    IF(COUNT(rating) >= 1, 'ACTIVE', 'INACTIVE') AS STATUS
 FROM reviewers
     LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
 GROUP BY reviewers.id;
