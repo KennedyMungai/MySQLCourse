@@ -152,5 +152,4 @@ SELECT first_name,
     -- END AS STATUS
 FROM reviewers
     LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
-GROUP BY first_name,
-    last_name;
+GROUP BY reviewers.id;
