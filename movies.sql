@@ -120,6 +120,7 @@ FROM reviewers
 -- Challenge 4
 -- --------------------------------------------
 -- --------------------------------------------
-SELECT title AS unreviewd_series
+SELECT title AS unreviewed_series
 FROM series
-    LEFT JOIN reviewers ON reviewers.id IS NULL;
+    LEFT JOIN reviews ON series.id = reviews.series_id
+WHERE rating IS NULL;
