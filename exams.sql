@@ -58,3 +58,25 @@
 -----------------------------------------------------
 -- DROP TABLES students,
 -- papers;
+-----------------------------------------------------
+-----------------------------------------------------
+-- First Exercise Solution
+-----------------------------------------------------
+-----------------------------------------------------
+SELECT first_name,
+    title,
+    grade
+FROM students
+    RIGHT JOIN papers on students.id = papers.student_id
+ORDER BY first_name DESC,
+    grade DESC;
+-----------------------------------------------------
+-----------------------------------------------------
+-- Second Exercise Solution
+-----------------------------------------------------
+-----------------------------------------------------
+SELECT first_name,
+    title,
+    grade
+FROM students
+    LEFT JOIN papers on students.id = papers.student_id;
