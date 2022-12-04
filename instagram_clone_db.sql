@@ -48,6 +48,11 @@ CREATE TABLE IF NOT EXISTS follows (
     FOREIGN KEY (followee_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (follower_id, followee_id)
 );
+CREATE TABLE IF NOT EXISTS tags (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tag_name VARCHAR(255) UNIQUE,
+    created_at TIMESTAMP DEFAULT NOW()
+);
 -- -------------------------------------------------------------
 -- -------------------------------------------------------------
 -- Alter statements
