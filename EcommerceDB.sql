@@ -88,4 +88,4 @@
 -- ------------------------------------------------
 SELECT *
 FROM customers
-    INNER JOIN orders ON customers.id = orders.customer_id;
+    RIGHT JOIN orders ON customers.id = orders.customer_id;
