@@ -56,3 +56,16 @@ SELECT first_name,
 FROM customers
     JOIN orders ON customers.id = orders.customer_id
 ORDER BY amount;
+-- ------------------------------------------------
+-- ------------------------------------------------
+-- A query to find the biggest spender 
+-- ------------------------------------------------
+-- ------------------------------------------------
+SELECT first_name,
+    last_name,
+    order_date,
+    customer_id,
+    SUM(amount)
+FROM customers
+    JOIN orders ON customers.id = orders.customer_id
+GROUP BY orders.customer_id;
