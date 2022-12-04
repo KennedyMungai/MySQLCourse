@@ -76,7 +76,7 @@
 -- ------------------------------------------------
 SELECT first_name,
     last_name,
-    IFNULL(SUM(amount), 0)
+    IFNULL(SUM(amount), 0) AS 'Total Spent'
 FROM customers
     LEFT JOIN orders ON customers.id = orders.customer_id;
 GROUP BY customers.id;
