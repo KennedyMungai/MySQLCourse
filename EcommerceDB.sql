@@ -49,13 +49,13 @@
 -- A fancier Join 
 -- ------------------------------------------------
 -- ------------------------------------------------
-SELECT first_name,
-    last_name,
-    order_date,
-    amount
-FROM customers
-    JOIN orders ON customers.id = orders.customer_id
-ORDER BY amount;
+-- SELECT first_name,
+--     last_name,
+--     order_date,
+--     amount
+-- FROM customers
+--     JOIN orders ON customers.id = orders.customer_id
+-- ORDER BY amount;
 -- ------------------------------------------------
 -- ------------------------------------------------
 -- A query to find the biggest spender 
@@ -63,7 +63,7 @@ ORDER BY amount;
 -- ------------------------------------------------
 SELECT first_name,
     last_name,
-    order_date,
+    -- order_date,
     customer_id,
     SUM(amount)
 FROM customers
