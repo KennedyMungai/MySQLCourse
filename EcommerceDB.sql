@@ -65,7 +65,7 @@ SELECT first_name,
     last_name,
     -- order_date,
     customer_id,
-    SUM(amount)
+    SUM(amount) AS 'Total Spent'
 FROM customers
     JOIN orders ON customers.id = orders.customer_id
 GROUP BY orders.customer_id;
