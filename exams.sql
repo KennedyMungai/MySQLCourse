@@ -99,4 +99,5 @@ SELECT first_name,
     IFNULL(AVG(grade), 0)
 FROM students
     LEFT JOIN papers on students.id = papers.student_id
-GROUP BY first_name;
+GROUP BY first_name
+ORDER BY AVG(grade) DESC;
