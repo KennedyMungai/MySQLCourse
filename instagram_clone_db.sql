@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 ALTER TABLE users
 MODIFY created_at TIMESTAMP DEFAULT NOW();
 ALTER TABLE users
-MODIFY username VARCHAR(30) NOT NULL UNIQUE;
+MODIFY username VARCHAR(255) NOT NULL UNIQUE;
 -- -------------------------------------------------------------
 -- -------------------------------------------------------------
 -- Describing tables
