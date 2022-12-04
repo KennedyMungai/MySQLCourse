@@ -132,6 +132,6 @@ WHERE rating IS NULL;
 SELECT genre,
     AVG(rating) AS avg_rating
 FROM series
-    JOIN reviews
+    JOIN reviews ON series.id = reviews.series_id
 GROUP BY genre
 ORDER BY genre;
