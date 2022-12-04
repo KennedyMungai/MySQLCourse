@@ -14,10 +14,10 @@
         "server": "localhost",
         "port": 3306,
         "driver": "MySQL",
-        "name": "EcommerceDB",
-        "database": "ecommerce_db",
-        "username": "kennedy",
-        "password": "Aracowahiromu1!"
+        "name": "Exams",
+        "database": "exams_db",
+        "password": "Aracowahiromu1!",
+        "username": "kennedy"
       }
     ]
   }
