@@ -63,7 +63,6 @@
 -- ------------------------------------------------
 SELECT first_name,
     last_name,
-    -- order_date,
     customer_id,
     SUM(amount) AS 'Total Spent'
 FROM customers
