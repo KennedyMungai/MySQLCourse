@@ -63,56 +63,56 @@
 -- First Exercise Solution
 -----------------------------------------------------
 -----------------------------------------------------
-SELECT first_name,
-    title,
-    grade
-FROM students
-    RIGHT JOIN papers on students.id = papers.student_id
-ORDER BY first_name DESC,
-    grade DESC;
+-- SELECT first_name,
+--     title,
+--     grade
+-- FROM students
+--     RIGHT JOIN papers on students.id = papers.student_id
+-- ORDER BY first_name DESC,
+--     grade DESC;
 -----------------------------------------------------
 -----------------------------------------------------
 -- Second Exercise Solution
 -----------------------------------------------------
 -----------------------------------------------------
-SELECT first_name,
-    title,
-    grade
-FROM students
-    LEFT JOIN papers on students.id = papers.student_id;
+-- SELECT first_name,
+--     title,
+--     grade
+-- FROM students
+--     LEFT JOIN papers on students.id = papers.student_id;
 -----------------------------------------------------
 -----------------------------------------------------
 -- Third Exercise Solution
 -----------------------------------------------------
 -----------------------------------------------------
-SELECT first_name,
-    IFNULL((title), 'missing'),
-    IFNULL((grade), 0)
-FROM students
-    LEFT JOIN papers on students.id = papers.student_id;
+-- SELECT first_name,
+--     IFNULL((title), 'missing'),
+--     IFNULL((grade), 0)
+-- FROM students
+--     LEFT JOIN papers on students.id = papers.student_id;
 -----------------------------------------------------
 -----------------------------------------------------
 -- Fourth Exercise Solution
 -----------------------------------------------------
 -----------------------------------------------------
-SELECT first_name,
-    IFNULL(AVG(grade), 0)
-FROM students
-    LEFT JOIN papers on students.id = papers.student_id
-GROUP BY first_name
-ORDER BY AVG(grade) DESC;
+-- SELECT first_name,
+--     IFNULL(AVG(grade), 0)
+-- FROM students
+--     LEFT JOIN papers on students.id = papers.student_id
+-- GROUP BY first_name
+-- ORDER BY AVG(grade) DESC;
 -----------------------------------------------------
 -----------------------------------------------------
 -- Fifth Exercise Solution
 -----------------------------------------------------
 -----------------------------------------------------
-SELECT first_name,
-    IFNULL(AVG(grade), 0),
-    CASE
-        WHEN AVG(grade) >= 75 THEN 'PASSING'
-        ELSE 'FAILING'
-    END AS passing_status
-FROM students
-    LEFT JOIN papers on students.id = papers.student_id
-GROUP BY first_name
-ORDER BY AVG(grade) DESC;
+-- SELECT first_name,
+--     IFNULL(AVG(grade), 0),
+--     CASE
+--         WHEN AVG(grade) >= 75 THEN 'PASSING'
+--         ELSE 'FAILING'
+--     END AS passing_status
+-- FROM students
+--     LEFT JOIN papers on students.id = papers.student_id
+-- GROUP BY first_name
+-- ORDER BY AVG(grade) DESC;
