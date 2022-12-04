@@ -105,3 +105,14 @@ VALUES (1, 1, 8.0),
     (14, 2, 8.5),
     (14, 3, 8.9),
     (14, 4, 8.9);
+-- --------------------------------------------
+-- --------------------------------------------
+-- Challenge 3
+-- --------------------------------------------
+-- --------------------------------------------
+SELECT first_name,
+    last_name,
+    rating
+FROM reviewers
+    LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
+ORDER BY last_name DESC;
