@@ -74,10 +74,18 @@
 -- A left join
 -- ------------------------------------------------
 -- ------------------------------------------------
-SELECT first_name,
-    last_name,
-    IFNULL(SUM(amount), 0) AS total_spent
+-- SELECT first_name,
+--     last_name,
+--     IFNULL(SUM(amount), 0) AS total_spent
+-- FROM customers
+--     LEFT JOIN orders ON customers.id = orders.customer_id;
+-- GROUP BY customers.id
+-- ORDER BY total_spent;
+-- ------------------------------------------------
+-- ------------------------------------------------
+-- A right join
+-- ------------------------------------------------
+-- ------------------------------------------------
+SELECT *
 FROM customers
-    LEFT JOIN orders ON customers.id = orders.customer_id;
-GROUP BY customers.id
-ORDER BY total_spent;
+    INNER JOIN orders ON customers.id = orders.customer_id;
