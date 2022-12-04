@@ -150,3 +150,15 @@ SELECT first_name,
 FROM reviewers
     LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
 GROUP BY reviewers.id;
+-- --------------------------------------------
+-- --------------------------------------------
+-- Challenge 7
+-- --------------------------------------------
+-- --------------------------------------------
+SELECT title,
+    rating,
+    CONCAT(first_name, ' ', last_name) AS 'Reviewer Name'
+FROM reviewers
+    INNER JOIN reviews ON reviewers.id = reviews.reviewer_id
+    INNER JOIN series ON series.id = reviews.series_id
+ORDER BY title -- GROUP BY reviewer.id;
