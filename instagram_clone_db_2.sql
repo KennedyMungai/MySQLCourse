@@ -36,3 +36,16 @@ SELECT username
 FROM users
     LEFT JOIN photos ON users.id = photos.user_id
 WHERE photos.id IS NULL;
+-- --------------------------------------
+-- --------------------------------------
+-- A query to find the users whO have 
+-- the most likes on a photo
+-- --------------------------------------
+-- --------------------------------------
+SELECT image_url,
+    COUNT(*) AS number_of_likes
+FROM photos
+    JOIN likes ON photos.id = likes.photo_id
+GROUP BY image_url
+ORDER BY number_of_likes DESC
+LIMIT 1;
