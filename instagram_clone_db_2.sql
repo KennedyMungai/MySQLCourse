@@ -51,3 +51,14 @@ FROM photos
 GROUP BY image_url
 ORDER BY number_of_likes DESC
 LIMIT 1;
+-- --------------------------------------
+-- --------------------------------------
+-- A query to find the average number of
+-- times the average user posts
+-- --------------------------------------
+-- --------------------------------------
+SELECT username,
+    COUNT(image_url) AS number_of_posts
+FROM users
+    INNER JOIN photos ON users.id = photos.user_id
+GROUP BY username;
