@@ -93,4 +93,7 @@ SELECT username,
 FROM users
     INNER JOIN likes ON users.id = likes.user_id
 GROUP BY likes.user_id
-HAVING no_of_likes = 257;
+HAVING no_of_likes = (
+        SELECT COUNT(*)
+        FROM photos
+    );
