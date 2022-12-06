@@ -7,6 +7,10 @@
 SHOW TABLES;
 -- --------------------------------------
 -- --------------------------------------
--- Simple show tables query 
+-- A query to find the 5 oldest users
 -- --------------------------------------
 -- --------------------------------------
+SELECT *
+FROM users
+ORDER BY created_at DESC
+LIMIT 5;
