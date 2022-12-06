@@ -24,4 +24,5 @@ SELECT DAYNAME(created_at) AS day,
     COUNT(*) AS count
 FROM users
 GROUP BY day
-ORDER BY count DESC;
+ORDER BY count DESC
+LIMIT 2;
