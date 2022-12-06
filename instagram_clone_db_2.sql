@@ -42,10 +42,12 @@ WHERE photos.id IS NULL;
 -- the most likes on a photo
 -- --------------------------------------
 -- --------------------------------------
-SELECT image_url,
+SELECT username,
+    image_url,
     COUNT(*) AS number_of_likes
 FROM photos
-    JOIN likes ON photos.id = likes.photo_id
+    INNER JOIN likes ON photos.id = likes.photo_id
+    INNER JOIN users ON users.id = photos.user_id
 GROUP BY image_url
 ORDER BY number_of_likes DESC
 LIMIT 1;
