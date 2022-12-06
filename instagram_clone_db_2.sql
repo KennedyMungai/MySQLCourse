@@ -82,3 +82,15 @@ FROM tags
 GROUP BY tag_name
 ORDER BY tag_number DESC
 LIMIT 5;
+-- --------------------------------------
+-- --------------------------------------
+-- Finding the users who have liked every
+-- photo on the site
+-- --------------------------------------
+-- --------------------------------------
+SELECT username,
+    COUNT(photo_id) as no_of_likes
+FROM users
+    INNER JOIN likes ON users.id = likes.user_id
+GROUP BY likes.user_id
+HAVING no_of_likes = 257;
