@@ -80,4 +80,5 @@ SELECT tag_name,
 FROM tags
     INNER JOIN photo_tags ON tags.id = photo_tags.tag_id
 GROUP BY tag_name
-ORDER BY tag_number DESC;
+ORDER BY tag_number DESC
+LIMIT 5;
