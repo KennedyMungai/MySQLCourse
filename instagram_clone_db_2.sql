@@ -62,3 +62,11 @@ SELECT username,
 FROM users
     INNER JOIN photos ON users.id = photos.user_id
 GROUP BY username;
+-- --------------------------------------
+SELECT (
+        SELECT COUNT(*)
+        FROM photos
+    ) / (
+        SELECT COUNT(*)
+        FROM users
+    ) AS avg;
