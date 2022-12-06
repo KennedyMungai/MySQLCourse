@@ -70,3 +70,14 @@ SELECT (
         SELECT COUNT(*)
         FROM users
     ) AS avg;
+-- --------------------------------------
+-- --------------------------------------
+-- 5 of the most commonly used hash tags
+-- --------------------------------------
+-- --------------------------------------
+SELECT tag_name,
+    COUNT(*) AS tag_number
+FROM tags
+    INNER JOIN photo_tags ON tags.id = photo_tags.tag_id
+GROUP BY tag_name
+ORDER BY tag_number DESC;
